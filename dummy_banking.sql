@@ -19,7 +19,8 @@ CREATE TABLE Transactions (
     AccountID INT,
     TransDate DATE,
     Amount DECIMAL(10,2),
-    Merchant TEXT
+    Merchant TEXT,
+	FOREIGN KEY (AccountID) REFERENCES Accounts(AccountID)
 );
 
 -- 2. Insert Sample Data
