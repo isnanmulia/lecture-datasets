@@ -1,9 +1,17 @@
 -- 1. Create the Tables
+CREATE TABLE CustomerType (
+	CustTypeID INT PRIMARY KEY,
+	CustTypeName TEXT
+);
+
 CREATE TABLE Customers (
     CustomerID INT PRIMARY KEY,
     FullName TEXT,
+    Gender CHAR(1),
     City TEXT,
-    Occupation TEXT
+    Occupation TEXT,
+    CustType INT,
+    FOREIGN KEY (CustType) REFERENCES CustomerType(CustTypeID)
 );
 
 CREATE TABLE Accounts (
@@ -20,17 +28,25 @@ CREATE TABLE Transactions (
     TransDate DATE,
     Amount DECIMAL(10,2),
     Merchant TEXT,
-	FOREIGN KEY (AccountID) REFERENCES Accounts(AccountID)
+    FOREIGN KEY (AccountID) REFERENCES Accounts(AccountID)
 );
 
 -- 2. Insert Sample Data
-INSERT INTO Customers VALUES (101, 'Budi Santoso', 'Jakarta', 'Lecturer');
-INSERT INTO Customers VALUES (102, 'Siti Aminah', 'Surabaya', 'Doctor');
-INSERT INTO Customers VALUES (103, 'Andi Wijaya', 'Bandung', 'Student');
-INSERT INTO Customers VALUES (104, 'Rina Wijaya', 'Semarang', 'Entrepreneur');
-INSERT INTO Customers VALUES (105, 'Fajar Pratama', 'Yogyakarta', 'Graphic Designer');
-INSERT INTO Customers VALUES (106, 'Dewi Lestari', 'Medan', 'Accountant');
-INSERT INTO Customers VALUES (107, 'Eko Prasetyo', 'Makassar', 'Civil Servant');
+INSERT INTO CustomerType VALUES (1, 'Bronze');
+INSERT INTO CustomerType VALUES (2, 'Silver');
+INSERT INTO CustomerType VALUES (3, 'Gold');
+INSERT INTO CustomerType VALUES (4, 'Platinum');
+
+INSERT INTO Customers VALUES (101, 'Budi Santoso', 'L', 'Jakarta', 'Lecturer', 3);
+INSERT INTO Customers VALUES (102, 'Siti Aminah', 'P', 'Surabaya', 'Doctor', 4);
+INSERT INTO Customers VALUES (103, 'Andi Wijaya', 'L', 'Bandung', 'Student', 1);
+INSERT INTO Customers VALUES (104, 'Rina Wijaya', 'P', 'Semarang', 'Entrepreneur', 4);
+INSERT INTO Customers VALUES (105, 'Fajar Pratama', 'L', 'Yogyakarta', 'Graphic Designer', 2);
+INSERT INTO Customers VALUES (106, 'Dewi Lestari', 'P', 'Medan', 'Accountant', 2);
+INSERT INTO Customers VALUES (107, 'Eko Prasetyo', 'L', 'Makassar', 'Civil Servant', 3);
+INSERT INTO Customers VALUES (108, 'Renata Mokoginta', 'P', 'Palu', 'Lecturer', 4);
+INSERT INTO Customers VALUES (109, 'Edo Kondologit', 'L', 'Nabire', 'Entrepreneur', 4);
+INSERT INTO Customers VALUES (110, 'I Made Andi', 'L', 'Denpasar', 'Artist', 3);
 
 INSERT INTO Accounts VALUES (9001, 101, 'Savings', 5500.00);
 INSERT INTO Accounts VALUES (9002, 102, 'Current', 12000.50);
