@@ -1,7 +1,7 @@
 -- 1. Create the Tables
 CREATE TABLE CustomerType (
-	CustTypeID INT PRIMARY KEY,
-	CustTypeName TEXT
+    CustTypeID INT PRIMARY KEY,
+    CustTypeName TEXT
 );
 
 CREATE TABLE Customers (
@@ -36,6 +36,8 @@ INSERT INTO CustomerType VALUES (1, 'Bronze');
 INSERT INTO CustomerType VALUES (2, 'Silver');
 INSERT INTO CustomerType VALUES (3, 'Gold');
 INSERT INTO CustomerType VALUES (4, 'Platinum');
+INSERT INTO CustomerType VALUES (5, 'Diamond');
+INSERT INTO CustomerType VALUES (6, 'Sapphire');
 
 INSERT INTO Customers VALUES (101, 'Budi Santoso', 'L', 'Jakarta', 'Lecturer', 3);
 INSERT INTO Customers VALUES (102, 'Siti Aminah', 'P', 'Surabaya', 'Doctor', 4);
@@ -47,6 +49,8 @@ INSERT INTO Customers VALUES (107, 'Eko Prasetyo', 'L', 'Makassar', 'Civil Serva
 INSERT INTO Customers VALUES (108, 'Renata Mokoginta', 'P', 'Palu', 'Lecturer', 4);
 INSERT INTO Customers VALUES (109, 'Edo Kondologit', 'L', 'Nabire', 'Entrepreneur', 4);
 INSERT INTO Customers VALUES (110, 'I Made Andi', 'L', 'Denpasar', 'Artist', 3);
+INSERT INTO Customers VALUES (111, 'Rhoma Irama', 'L', 'Jakarta', 'Artist', NULL);
+INSERT INTO Customers VALUES (112, 'Sri Mulyani', 'P', 'Semarang', 'Civil Servant', NULL);
 
 INSERT INTO Accounts VALUES (9001, 101, 'Savings', 5500.00);
 INSERT INTO Accounts VALUES (9002, 102, 'Current', 12000.50);
