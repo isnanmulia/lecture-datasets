@@ -1,0 +1,16 @@
+Cust_ID,Full_Name,Birth_Date,City,Monthly_Income,Current_Balance,Last_Trans_Date,Account_Type
+101,Budi Santoso,1985-05-12,Jakarta,7500,12000.5,2026-03-01,Savings
+102,Siti Aminah,1992-11-20,jkt,8200,1500,2026-03-25,Savings
+103,Agus Setiawan,1978-02-15,Bandung,,500.25,2026-01-10,Current
+104,Rina Wijaya,1988-07-30,Surabaya,12000,45000,2026-03-28,Savings
+105,Dewi Lestari,2000-01-05,SURABAYA,4500,200,2026-02-15,Current
+106,Eko Prasetyo,1982-09-12,Jakarta,6000,,2026-03-10,Savings
+107,Fajar Pratama,1995-04-22,Semarang,5500,1200,2026-03-20,Current
+108,Andi Yusuf,2005-12-30,Jakarta,2000,50,2025-12-01,Savings
+109,Budi Santoso,1985-05-12,Jakarta,7500,12000.5,2026-03-01,Savings
+110,Hendra Kurnia,1980-03-18,depok,9000,3200,2026-03-15,Current
+111,Maya Putri,1993-06-25,Bandung,7800,8900,2026-02-28,Savings
+112,Rizky Fauzi,1987-10-10,Jakarta,6500,150,2025-11-20,Savings
+113,Nina Marlina,1990-12-12,SEMARANG,4200,,2026-03-05,Current
+114,Taufik Hidayat,1983-08-08,Bandung,11000,25000,2026-03-29,Savings
+115,Hendra Kurnia,1980-03-18,depok,9000,3200,2026-03-15,Current
